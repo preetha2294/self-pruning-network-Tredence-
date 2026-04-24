@@ -1,13 +1,13 @@
 # Self-Pruning Neural Network
 
-## 📌 Overview
+## Overview
 This project implements a **self-pruning neural network** where the model learns to remove unnecessary weights during training.
 
 Instead of pruning after training, each weight is associated with a learnable **gate parameter** that controls whether the connection is active or pruned.
 
 ---
 
-## 🧠 Core Idea
+## Core Idea
 
 Each weight has a gate:
 
@@ -20,7 +20,7 @@ The model learns these gates automatically using a sparsity penalty.
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### 1. Custom Layer: PrunableLinear
 - Contains:
@@ -58,7 +58,7 @@ SparsityLoss = sum of all gate values (L1 norm)
 
 ---
 
-## 📊 Results
+## Results
 
 | Lambda | Accuracy | Sparsity |
 |--------|----------|----------|
@@ -68,7 +68,7 @@ SparsityLoss = sum of all gate values (L1 norm)
 
 ---
 
-## 📈 Observations
+## Observations
 
 - Increasing λ increases sparsity  
 - Very high λ leads to over-pruning and accuracy drop  
@@ -76,7 +76,7 @@ SparsityLoss = sum of all gate values (L1 norm)
 
 ---
 
-## 📷 Gate Distribution
+## Gate Distribution
 
 Plots show:
 - Large spike near 0 → pruned weights  
@@ -84,7 +84,7 @@ Plots show:
 
 ---
 
-## 📁 Files Included
+## Files Included
 
 - `main.py` → complete implementation  
 - `report.md` → detailed results and explanation  
@@ -92,7 +92,7 @@ Plots show:
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 python main.py
